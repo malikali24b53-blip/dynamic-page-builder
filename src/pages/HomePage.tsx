@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const HomePage = () => (
-  <section
-    className="relative min-h-[80vh] flex items-center bg-cover bg-center"
-    style={{ backgroundImage: `url(${heroBg})` }}
-  >
+  <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+    {/* Video Background */}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src={heroVideo} type="video/mp4" />
+    </video>
     <div className="absolute inset-0 bg-agro-overlay" />
     <div className="relative container mx-auto px-4 py-20">
-      <h1 className="font-heading text-4xl md:text-6xl font-bold text-primary-foreground mb-2">
+      <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-2">
         Anas Agro <span className="italic text-accent">Services</span>
       </h1>
-      <p className="text-lg md:text-xl text-primary-foreground opacity-90 mb-8 max-w-lg">
+      <p className="text-lg md:text-xl text-white opacity-90 mb-8 max-w-lg">
         Empowering Agriculture with Quality & Trust
       </p>
       <div className="flex flex-wrap gap-4">
