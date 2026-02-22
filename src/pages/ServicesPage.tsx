@@ -3,6 +3,8 @@ import serviceMachinery from "@/assets/service-machinery.jpg";
 import serviceIrrigation from "@/assets/service-irrigation.jpg";
 import serviceAdvisory from "@/assets/service-advisory.jpg";
 
+const WHATSAPP_LINK = "https://wa.me/923447542097";
+
 const services = [
   {
     title: "Agricultural Supplies",
@@ -52,9 +54,14 @@ const ServicesPage = () => (
             <div className="p-5">
               <h3 className="font-heading font-bold text-lg text-foreground mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
-              <button className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold hover:bg-agro-green transition">
-                Read More
-              </button>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 rounded-full bg-[#25D366] text-white text-xs font-bold hover:bg-[#1ebe57] transition"
+              >
+                📞 WhatsApp
+              </a>
             </div>
           </div>
         ))}

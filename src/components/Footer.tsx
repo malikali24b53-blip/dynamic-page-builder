@@ -45,13 +45,13 @@ const Footer = () => (
         <h4 className="font-heading font-bold text-lg mb-4">Contact Us</h4>
         <ul className="space-y-3 text-sm opacity-80">
           <li className="flex items-center gap-2">
-            <Phone className="h-4 w-4 text-accent" /> +92 330 126567
+            <Phone className="h-4 w-4 text-accent" /> 0344 7542097
           </li>
           <li className="flex items-center gap-2">
-            <Mail className="h-4 w-4 text-accent" /> info@anasagro.pk
+            <Mail className="h-4 w-4 text-accent" /> malikanas24b274@gmail.com
           </li>
           <li className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-accent" /> Pakistan
+            <MapPin className="h-4 w-4 text-accent" /> Punjab, Pakistan
           </li>
         </ul>
       </div>
