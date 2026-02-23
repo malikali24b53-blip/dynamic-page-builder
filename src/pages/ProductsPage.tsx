@@ -4,7 +4,7 @@ import cornCutter from "@/assets/corn-cutter.png";
 import cornCutterDetail from "@/assets/product-corn-cutter-detail.jpg";
 import productTractor from "@/assets/product-tractor.jpg";
 import yellowCornCutter from "@/assets/yellow-corn-cutter.png";
-import yellowCombine from "@/assets/yellow-combine-harvester.png";
+import yellowCombine from "@/assets/new-holland-combine.png";
 
 const products = [
   {
