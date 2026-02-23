@@ -55,7 +55,7 @@ const ServicesPage = () => (
               <h3 className="font-heading font-bold text-lg text-foreground mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
               <a
-                href={WHATSAPP_LINK}
+                href={`${WHATSAPP_LINK}?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20inquire%20about%20${encodeURIComponent(s.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded-full bg-[#25D366] text-white text-xs font-bold hover:bg-[#1ebe57] transition"

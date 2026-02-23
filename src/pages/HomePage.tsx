@@ -28,6 +28,14 @@ const HomePage = () => (
         >
           Our Services
         </Link>
+        <a
+          href="https://poe.com/Agrobot732"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border-2 border-accent text-accent font-bold text-sm hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(var(--accent),0.4)]"
+        >
+          🤖 Book Services
+        </a>
         <Link
           to="/contact"
           className="inline-block px-6 py-3 rounded-full border-2 border-accent text-accent font-bold text-sm hover:bg-accent hover:text-accent-foreground transition"
