@@ -3,6 +3,8 @@ import { X } from "lucide-react";
 import cornCutter from "@/assets/corn-cutter.png";
 import cornCutterDetail from "@/assets/product-corn-cutter-detail.jpg";
 import productTractor from "@/assets/product-tractor.jpg";
+import yellowCornCutter from "@/assets/yellow-corn-cutter.png";
+import yellowCombine from "@/assets/yellow-combine-harvester.png";
 
 const products = [
   {
@@ -26,23 +28,43 @@ const products = [
     }
   },
   {
-    title: "Red Cutter Reaper",
-    desc: "Powerful red cutter reaper machine for large-scale crop harvesting with high efficiency.",
-    img: cornCutterDetail,
-    detailImg: cornCutterDetail,
+    title: "New Holland Corn Header",
+    desc: "Yellow New Holland corn header — professional grade corn cutting attachment for combine harvesters.",
+    img: yellowCornCutter,
+    detailImg: yellowCornCutter,
     details: {
-      heading: "Red Cutter Reaper Machine",
+      heading: "New Holland Corn Header",
       features: [
-        "Heavy-duty construction for continuous farm use",
-        "Wide cutting bar for faster field coverage",
-        "Suitable for wheat, corn, rice, and fodder crops",
-        "Self-propelled design for ease of operation",
-        "Fuel-efficient engine with long-lasting performance",
-        "Perfect for medium to large-scale farming operations",
-        "Easy blade replacement and servicing",
-        "Saves labor costs significantly compared to manual harvesting"
+        "Professional-grade corn header for New Holland combine harvesters",
+        "Multiple row design for maximum field coverage per pass",
+        "Heavy-duty pointed snapping plates for clean stalk separation",
+        "Adjustable row spacing to match different planting patterns",
+        "Built-in stalk choppers reduce field residue for easier tillage",
+        "Low-loss gathering chains ensure every ear is collected",
+        "Durable construction withstands tough Pakistani field conditions",
+        "Significantly reduces harvesting time on large corn fields"
       ],
-      howItWorks: "This red cutter reaper is designed for heavy-duty crop harvesting. The front-mounted cutting bar moves in a rapid back-and-forth motion to slice through crop stems cleanly. The machine's self-propelled mechanism allows a single operator to cover large fields efficiently, while the cut crops are deposited in neat rows for drying and collection."
+      howItWorks: "The New Holland corn header attaches to the front of a combine harvester. As the combine moves through the field, the pointed snapping plates pull corn stalks downward while the gathering chains strip the ears from the stalks. The ears are then fed into the combine's threshing system where kernels are separated from the cob and collected in the grain tank."
+    }
+  },
+  {
+    title: "New Holland Combine Harvester",
+    desc: "New Holland TC series combine harvester — all-in-one solution for wheat, rice, and corn harvesting.",
+    img: yellowCombine,
+    detailImg: yellowCombine,
+    details: {
+      heading: "New Holland Combine Harvester",
+      features: [
+        "All-in-one harvesting: cuts, threshes, and cleans grain in a single pass",
+        "High-capacity grain tank for fewer unloading stops",
+        "Powerful engine for non-stop operation in heavy crop conditions",
+        "Air-conditioned cabin with comfortable operator controls",
+        "Compatible with multiple header attachments (corn, wheat, rice)",
+        "Advanced sieve and fan system for clean grain output",
+        "Low grain loss technology maximizes yield",
+        "Ideal for large-scale farming operations across Pakistan"
+      ],
+      howItWorks: "The New Holland combine harvester drives through the field, cutting the standing crop with its front header. Inside, the threshing drum separates grain from the straw. The cleaning system uses sieves and fans to remove chaff, delivering clean grain to the storage tank. The straw is ejected from the rear. When the tank is full, grain is unloaded into a trolley via the unloading auger."
     }
   },
   {
@@ -149,7 +171,7 @@ const ProductsPage = () => {
               </div>
 
               <a
-                href="https://wa.me/923466539820"
+                href={`https://wa.me/923466539820?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20inquire%20about%20${encodeURIComponent(selectedProduct.details.heading)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 rounded-full bg-[#25D366] text-white font-bold text-sm hover:bg-[#1ebe57] transition mt-4"

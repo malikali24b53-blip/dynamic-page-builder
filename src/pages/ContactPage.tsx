@@ -37,8 +37,8 @@ const ContactPage = () => (
               const email = (form.elements.namedItem('email') as HTMLInputElement)?.value || '';
               const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || '';
               const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
-              const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-              window.open(`https://wa.me/923466539820?text=${text}`, '_blank');
+              const text = `Assalam o Alaikum%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+              window.open(`https://wa.me/923466539820?text=${encodeURIComponent(text.replace(/%0A/g, '\n'))}`, '_blank');
             }}>
               <input
                 name="name"
