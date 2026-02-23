@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import ctaBg from "@/assets/cta-bg.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/923447542097";
+const WHATSAPP_LINK = "https://wa.me/923466539820";
 
 const ContactPage = () => (
   <div>
@@ -38,7 +38,7 @@ const ContactPage = () => (
               const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || '';
               const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
               const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-              window.open(`https://wa.me/923447542097?text=${text}`, '_blank');
+              window.open(`https://wa.me/923466539820?text=${text}`, '_blank');
             }}>
               <input
                 name="name"
@@ -81,7 +81,7 @@ const ContactPage = () => (
               <Phone className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <p className="font-bold text-foreground">Phone</p>
-                <p className="text-muted-foreground">0344 7542097</p>
+                <p className="text-muted-foreground">0346 6539820</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

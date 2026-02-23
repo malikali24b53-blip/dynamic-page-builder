@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Phone */}
           <div className="hidden md:flex items-center gap-3 text-white">
             <Phone className="h-4 w-4 text-accent" />
-            <span className="text-sm">0344 7542097</span>
+            <span className="text-sm">0346 6539820</span>
           </div>
 
           {/* Mobile Toggle */}
@@ -78,7 +78,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center gap-2 px-6 py-3 text-white">
               <Phone className="h-4 w-4 text-accent" />
-              <span className="text-sm">0344 7542097</span>
+              <span className="text-sm">0346 6539820</span>
             </div>
           </div>
         )}
