@@ -3,7 +3,7 @@ import serviceMachinery from "@/assets/service-machinery.jpg";
 import serviceIrrigation from "@/assets/service-irrigation.jpg";
 import serviceAdvisory from "@/assets/service-advisory.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/923447542097";
+const WHATSAPP_LINK = "https://wa.me/923466539820";
 
 const services = [
   {

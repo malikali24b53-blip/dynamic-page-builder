@@ -149,7 +149,7 @@ const ProductsPage = () => {
               </div>
 
               <a
-                href="https://wa.me/923447542097"
+                href="https://wa.me/923466539820"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 rounded-full bg-[#25D366] text-white font-bold text-sm hover:bg-[#1ebe57] transition mt-4"

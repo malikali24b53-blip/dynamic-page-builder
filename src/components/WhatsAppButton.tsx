@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "923447542097";
+const WHATSAPP_NUMBER = "923466539820";
 
 const WhatsAppButton = () => (
   <a
