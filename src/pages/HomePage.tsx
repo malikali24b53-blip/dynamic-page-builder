@@ -1,27 +1,43 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HomePage = () => {
   const [loaded, setLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Trigger boom animation after a tiny delay for mount
-    const t = setTimeout(() => setLoaded(true), 100);
-    return () => clearTimeout(t);
+    // Boom animation fires immediately — no waiting for video
+    setLoaded(true);
+
+    // Eagerly play video in background
+    const v = videoRef.current;
+    if (v) {
+      v.load();
+      v.play().catch(() => {});
+    }
   }, []);
 
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Video Background - preload for instant playback */}
+      {/* Static poster shown instantly */}
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      {/* Video loads on top when ready */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
+        poster={heroBg}
         className="absolute inset-0 w-full h-full object-cover"
-        onCanPlayThrough={(e) => (e.currentTarget as HTMLVideoElement).play()}
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
