@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
 import heroBg from "@/assets/hero-bg.jpg";
+import masseyTractor from "@/assets/massey-tractor.png";
 
 const HomePage = () => {
   const [loaded, setLoaded] = useState(false);
@@ -42,6 +43,13 @@ const HomePage = () => {
         <source src={heroVideo} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-agro-overlay" />
+
+      {/* Massey Ferguson Tractor - moving across */}
+      <img
+        src={masseyTractor}
+        alt="Massey Ferguson 385 Tractor"
+        className="absolute bottom-4 md:bottom-8 h-24 md:h-40 lg:h-48 object-contain animate-tractor-drive drop-shadow-2xl pointer-events-none z-10"
+      />
 
       {/* Hero Content with Boom Reveal */}
       <div
