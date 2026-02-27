@@ -18,12 +18,6 @@ const HomePage = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      <img
-        src={heroBg}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
       <video
         ref={videoRef}
         autoPlay
