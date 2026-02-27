@@ -8,12 +8,12 @@ const HomePage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    setLoaded(true);
     const v = videoRef.current;
     if (v) {
       v.load();
       v.play().catch(() => {});
     }
+    requestAnimationFrame(() => setLoaded(true));
   }, []);
 
   return (
@@ -26,7 +26,8 @@ const HomePage = () => {
         playsInline
         preload="auto"
         poster={heroBg}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover will-change-transform"
+        style={{ transform: 'translateZ(0)' }}
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
