@@ -39,27 +39,27 @@ const HomePage = () => {
       <div className="absolute inset-0 bg-agro-overlay" />
 
       <div
-        className={`relative container mx-auto px-4 py-20 transition-opacity duration-300 ease-out ${
-          loaded ? "opacity-100" : "opacity-0"
+        className={`relative container mx-auto px-4 py-20 transition-all duration-700 ease-out ${
+          loaded ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-75 translate-y-8"
         }`}
       >
         <h1
-          className={`font-heading text-4xl md:text-6xl font-bold text-white mb-2 transition-opacity duration-300 delay-100 ease-out ${
-            loaded ? "opacity-100" : "opacity-0"
+          className={`font-heading text-4xl md:text-6xl font-bold text-white mb-2 transition-all duration-700 delay-200 ease-out ${
+            loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-90"
           }`}
         >
           Anas Agro <span className="italic text-accent">Services</span>
         </h1>
         <p
-          className={`text-lg md:text-xl text-white opacity-90 mb-8 max-w-lg transition-opacity duration-300 delay-150 ease-out ${
-            loaded ? "opacity-90" : "opacity-0"
+          className={`text-lg md:text-xl text-white opacity-90 mb-8 max-w-lg transition-all duration-700 delay-[400ms] ease-out ${
+            loaded ? "opacity-90 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           Empowering Agriculture with Quality & Trust
         </p>
         <div
-          className={`flex flex-wrap gap-4 transition-opacity duration-300 delay-200 ease-out ${
-            loaded ? "opacity-100" : "opacity-0"
+          className={`flex flex-wrap gap-4 transition-all duration-700 delay-500 ease-out ${
+            loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-90"
           }`}
         >
           <Link
