@@ -44,26 +44,6 @@ const HomePage = () => {
       </video>
       <div className="absolute inset-0 bg-agro-overlay" />
 
-      {/* Flying Birds */}
-      <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
-        {/* Bird SVG paths - simple silhouettes */}
-        <svg className="absolute animate-bird-1 w-6 h-6 md:w-8 md:h-8 text-white/60" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 12c3-3 6-5 10-5s7 2 10 5c-3-1-6-2-10-2s-7 1-10 2z"/>
-        </svg>
-        <svg className="absolute animate-bird-2 w-5 h-5 md:w-7 md:h-7 text-white/50" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 12c3-3 6-5 10-5s7 2 10 5c-3-1-6-2-10-2s-7 1-10 2z"/>
-        </svg>
-        <svg className="absolute animate-bird-3 w-4 h-4 md:w-6 md:h-6 text-white/40" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 12c3-3 6-5 10-5s7 2 10 5c-3-1-6-2-10-2s-7 1-10 2z"/>
-        </svg>
-        <svg className="absolute animate-bird-4 w-5 h-5 text-white/35" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 12c3-3 6-5 10-5s7 2 10 5c-3-1-6-2-10-2s-7 1-10 2z"/>
-        </svg>
-        <svg className="absolute animate-bird-5 w-3 h-3 md:w-5 md:h-5 text-white/45" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 12c3-3 6-5 10-5s7 2 10 5c-3-1-6-2-10-2s-7 1-10 2z"/>
-        </svg>
-      </div>
-
       {/* Hero Content with Boom Reveal */}
       <div
         className={`relative container mx-auto px-4 py-20 transition-all duration-700 ease-out ${
