@@ -8,10 +8,7 @@ const HomePage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Boom animation fires immediately — no waiting for video
     setLoaded(true);
-
-    // Eagerly play video in background
     const v = videoRef.current;
     if (v) {
       v.load();
@@ -21,14 +18,12 @@ const HomePage = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Static poster shown instantly */}
       <img
         src={heroBg}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      {/* Video loads on top when ready */}
       <video
         ref={videoRef}
         autoPlay
@@ -37,38 +32,34 @@ const HomePage = () => {
         playsInline
         preload="auto"
         poster={heroBg}
-        className="absolute inset-0 w-full h-full object-cover will-change-transform"
-        style={{ imageRendering: "auto", filter: "brightness(1.05) contrast(1.02)" }}
+        className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-agro-overlay" />
 
-      {/* Hero Content with Boom Reveal */}
       <div
-        className={`relative container mx-auto px-4 py-20 transition-all duration-700 ease-out ${
-          loaded
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-75 translate-y-8"
+        className={`relative container mx-auto px-4 py-20 transition-opacity duration-300 ease-out ${
+          loaded ? "opacity-100" : "opacity-0"
         }`}
       >
         <h1
-          className={`font-heading text-4xl md:text-6xl font-bold text-white mb-2 transition-all duration-700 delay-200 ease-out ${
-            loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-90"
+          className={`font-heading text-4xl md:text-6xl font-bold text-white mb-2 transition-opacity duration-300 delay-100 ease-out ${
+            loaded ? "opacity-100" : "opacity-0"
           }`}
         >
           Anas Agro <span className="italic text-accent">Services</span>
         </h1>
         <p
-          className={`text-lg md:text-xl text-white opacity-90 mb-8 max-w-lg transition-all duration-700 delay-400 ease-out ${
-            loaded ? "opacity-90 translate-y-0" : "opacity-0 translate-y-6"
+          className={`text-lg md:text-xl text-white opacity-90 mb-8 max-w-lg transition-opacity duration-300 delay-150 ease-out ${
+            loaded ? "opacity-90" : "opacity-0"
           }`}
         >
           Empowering Agriculture with Quality & Trust
         </p>
         <div
-          className={`flex flex-wrap gap-4 transition-all duration-700 delay-500 ease-out ${
-            loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-90"
+          className={`flex flex-wrap gap-4 transition-opacity duration-300 delay-200 ease-out ${
+            loaded ? "opacity-100" : "opacity-0"
           }`}
         >
           <Link
